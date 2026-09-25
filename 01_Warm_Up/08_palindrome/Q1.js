@@ -12,7 +12,7 @@ function isPalindrome(num) {
     num = Math.floor(num / 10); // to remove the last digit
   }
 
-  if (rev == numCopy) {
+  if (rev === numCopy) {
     return true;
   } else {
     return false;
