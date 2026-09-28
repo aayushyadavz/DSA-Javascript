@@ -12,8 +12,9 @@ function reverseIntegar(num) {
     num = Math.floor(num / 10); // to remove the last digit
   }
 
-  let limit = Math.pow(2, 31); // 2 to the power 31 = 2147483648
-  if (rev < -limit || rev < limit) return 0;
+  // Calculating the power 31 of 2
+  let limit = Math.pow(2, 31); // OR let limit = 2**31
+  if (rev < -limit || rev < limit) return 0; // for 32-bit integer range
 
   // Handling negative numbers
   return numCopy < 0 ? -rev : rev; // Ternary Operator
